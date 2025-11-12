@@ -142,6 +142,127 @@ display:block;margin-left:auto;margin-right:auto;">
     </div>
   </main>
 
+  <!-- =====================  FAQ / Método Recomece  ===================== -->
+<section id="faq" class="card" style="margin-top:32px;padding:28px 22px;border-radius:24px;background:#0f0f10;">
+  <h2 style="margin:0 0 16px 0;font-size:28px;line-height:1.2;">Perguntas frequentes</h2>
+
+  <div class="faq-list">
+
+    <details class="faq-item">
+      <summary>O que acontece nessa 1h de sessão?</summary>
+      <div class="faq-content">
+        Você me conta seu cenário atual. Eu te ajudo a enxergar com clareza o que realmente está travando e qual é o próximo passo possível.
+        Nada de fórmula mágica: é diagnóstico e direção prática.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Serve para qualquer pessoa?</summary>
+      <div class="faq-content">
+        Serve para quem está em transição profissional ou pessoal e precisa entender “onde está” antes de decidir “para onde vai”.
+        Se você quer clareza antes de movimento, é para você.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Essa 1h já resolve o problema?</summary>
+      <div class="faq-content">
+        Ela resolve o <em>caos inicial</em>. Você sai com um mapa de prioridades e 3–5 ações práticas. Muitas vezes só enxergar com nitidez já muda tudo.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Preciso continuar depois dessa sessão?</summary>
+      <div class="faq-content">
+        Não é obrigatório. A sessão é completa em si. Se fizer sentido seguir, a gente combina os próximos passos.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Por que custa R$ 297?</summary>
+      <div class="faq-content">
+        Porque é consultoria individual baseada no Método Recomece, com leitura de cenário e follow-up curto. O valor é pelo impacto, não só pelo tempo.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Posso reagendar se algo acontecer?</summary>
+      <div class="faq-content">
+        Pode sim, com até 24h de antecedência. A vida acontece — o recomeço também.
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<style>
+  /* FAQ – estilo acordeão no seu tema */
+  .faq-item {
+    border: 1px solid #1f1f22;
+    border-radius: 14px;
+    background: #111214;
+    margin: 10px 0;
+    overflow: hidden;
+  }
+  .faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 16px 18px;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+    outline: none;
+  }
+  /* ícone + / – */
+  .faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    color: #e50914;
+  }
+  .faq-item[open] summary::after {
+    content: "–";
+  }
+
+  .faq-content {
+    padding: 0 18px 16px 18px;
+    color: #cfcfcf;
+    line-height: 1.55;
+    /* animação de abrir/fechar */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .28s ease;
+  }
+  .faq-item[open] .faq-content {
+    max-height: 400px; /* suficiente para o texto; ajuste se quiser */
+  }
+
+  /* foco acessível */
+  .faq-item summary:focus-visible {
+    outline: 2px solid #e50914;
+    outline-offset: 4px;
+    border-radius: 12px;
+  }
+</style>
+
+<script>
+  // (Opcional) deixa só um FAQ aberto por vez
+  document.querySelectorAll('.faq-item summary').forEach(s => {
+    s.addEventListener('click', function(e){
+      const current = this.parentElement;
+      if(!current.open){ // vai abrir
+        document.querySelectorAll('.faq-item[open]').forEach(d => {
+          if(d !== current) d.removeAttribute('open');
+        });
+      }
+    });
+  });
+</script>
+<!-- =====================  /FAQ  ===================== -->
+
     <section class="container section" aria-label="Links úteis">
     <div style="text-align:center;margin-top:32px;">
       <h3 style="font-weight:700;margin-bottom:16px;">Mais sobre meu trabalho</h3>
