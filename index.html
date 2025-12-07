@@ -1,294 +1,1028 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
+  <title>Recomece – Entre Cargas e Cicatrizes | Edésio Oliveira</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Edésio Oliveira | Método Recomece</title>
-  <meta name="description" content="Sessão individual de 1h focada no passo 1 do Método Recomece: Reconhecer o ponto de partida. Agende, leia a newsletter e conheça o método." />
-  <meta property="og:title" content="Edésio Oliveira | Método Recomece" />
-  <meta property="og:description" content="Sessão de 1h para clareza e direção. Passo 1: Reconhecer o ponto de partida." />
+  <meta name="description" content="Livro Recomece – Entre Cargas e Cicatrizes e consultoria individual baseada no Método Recomece, criado por Edésio Oliveira." />
+  <meta name="author" content="Edésio Oliveira" />
+
+  <!-- Open Graph básico -->
+  <meta property="og:title" content="Recomece – Entre Cargas e Cicatrizes" />
+  <meta property="og:description" content="Um livro e um método para recomeçar com clareza, mesmo em meio ao caos." />
+  <meta property="og:image" content="logorecomece.jpeg" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?q=80&w=1200&auto=format&fit=crop" />
-  <meta name="theme-color" content="#000000" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --bg:#0a0a0a; --txt:#f5f5f5; --muted:#bdbdbd; --brand:#e50914; --card:#111; --line:#1d1d1d
+    :root {
+      --bg-main: #050506;
+      --bg-secondary: #101014;
+      --bg-section: #15151b;
+      --accent: #e02828;
+      --accent-soft: #ff4b4b;
+      --text-main: #f5f5f5;
+      --text-muted: #b4b4c2;
+      --border-soft: #2a2a34;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --radius-lg: 18px;
+      --radius-full: 999px;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.65);
+      --transition-fast: 0.18s ease-out;
+      --max-width: 1120px;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;height:100%}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--txt);line-height:1.5}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
-    .hero{min-height:72vh;display:grid;place-items:center;background:
-      radial-gradient(1200px 600px at 70% 80%, rgba(229,9,20,.18), transparent 60%),
-      radial-gradient(800px 400px at 90% -20%, rgba(229,9,20,.08), transparent 60%),
-      var(--bg)}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:20px;padding:32px;backdrop-filter:saturate(120%)}
-    .brand{display:flex;gap:14px;align-items:center;margin-bottom:8px}
-    .logo{width:38px;height:38px}
-    .title{font-weight:800;font-size:clamp(28px,6vw,56px);letter-spacing:.2px;margin:8px 0}
-    .subtitle{color:var(--muted);font-size:clamp(14px,2.6vw,18px);max-width:60ch}
-    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;border:1px solid var(--line);background:#121212;color:#fff;font-weight:600}
-    .btn.primary{background:var(--brand);border-color:#b70710}
-    .btn:hover{transform:translateY(-1px);transition:.2s}
-    .pill{display:inline-flex;align-items:center;gap:8px;color:#fff;background:rgba(229,9,20,.16);border:1px solid #2a2a2a;padding:6px 12px;border-radius:999px;font-weight:600;width:max-content}
-    .grid{display:grid;gap:18px;margin-top:48px}
-    @media(min-width:900px){.grid{grid-template-columns:1.2fr .8fr;align-items:center}}
-    .method{border:1px solid var(--line);border-radius:18px;padding:22px;background:var(--card)}
-    .steps{display:grid;gap:10px;margin-top:10px}
-    .step{display:flex;gap:12px;align-items:center}
-    .badge{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#191919;border:1px solid #2a2a2a;font-weight:800}
-    .step strong{color:#fff}
-    .step--focus .badge{background:var(--brand);border-color:#b70710}
-    .step--focus strong{color:var(--brand)}
-    .section{border-top:1px solid var(--line);margin-top:64px;padding-top:32px}
-    footer{border-top:1px solid var(--line);margin-top:56px}
-    .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:22px 0;color:var(--muted)}
-    .note{font-size:13px;color:var(--muted)}
-    .ghost{opacity:.7}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: #000;
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* Fundo com textura da contracapa */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("fundosite.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.25; /* se ficar forte demais, baixa pra 0.18–0.20 */
+      z-index: -1;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      min-height: 100vh;
+      backdrop-filter: blur(2px);
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* NAV */
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(
+        to bottom,
+        rgba(5, 5, 6, 0.96),
+        rgba(5, 5, 6, 0.82),
+        rgba(5, 5, 6, 0.4),
+        transparent
+      );
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: radial-gradient(circle at 30% 20%, #ff4b4b, #660000 60%, #000 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-title {
+      display: flex;
+      flex-direction: column;
+      font-size: 13px;
+    }
+
+    .nav-title span:first-child {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+      font-size: 11px;
+    }
+
+    .nav-title span:last-child {
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 13px;
+    }
+
+    .nav-link {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: border-color var(--transition-fast), color var(--transition-fast),
+        background-color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .nav-link:hover {
+      color: var(--text-main);
+      border-color: rgba(255, 255, 255, 0.14);
+      transform: translateY(-1px);
+    }
+
+    .nav-link-cta {
+      border-radius: var(--radius-full);
+      padding: 8px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: linear-gradient(120deg, var(--accent), var(--accent-soft));
+      color: #fff;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(224, 40, 40, 0.45);
+    }
+
+    .nav-link-cta:hover {
+      background: linear-gradient(120deg, var(--accent-soft), var(--accent));
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 720px) {
+      .nav-inner {
+        gap: 10px;
+      }
+      .nav-links {
+        gap: 8px;
+      }
+      .nav-links span:nth-child(2),
+      .nav-links span:nth-child(3) {
+        display: none;
+      }
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 80px 0 56px;
+      position: relative;
+    }
+
+    .hero::before {
+      /* overlay escuro pra garantir legibilidade em cima da textura */
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 10% 0%, rgba(224, 40, 40, 0.18), transparent 55%),
+        radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.12), transparent 60%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.92));
+      z-index: -1;
+    }
+
+    .hero-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .hero-logo-wrapper {
+      width: min(320px, 70vw);
+      margin-bottom: 6px;
+      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.8));
+    }
+
+    .hero-kicker {
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      color: var(--accent-soft);
+    }
+
+    .hero-title {
+      font-size: clamp(26px, 4vw, 34px);
+      font-weight: 700;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: var(--radius-full);
+      border: 1px solid transparent;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color var(--transition-fast), color var(--transition-fast),
+        border-color var(--transition-fast), transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(120deg, var(--accent), var(--accent-soft));
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 14px 40px rgba(224, 40, 40, 0.6);
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      background: linear-gradient(120deg, var(--accent-soft), var(--accent));
+    }
+
+    .btn-ghost {
+      background: rgba(10, 10, 12, 0.7);
+      color: var(--text-muted);
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(255, 255, 255, 0.3);
+      color: var(--text-main);
+      transform: translateY(-1px);
+    }
+
+    .hero-note {
+      font-size: 13px;
+      color: var(--text-muted);
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .hero-note strong {
+      color: var(--accent-soft);
+      font-weight: 600;
+    }
+
+    /* SECTION WRAPPER */
+
+    section {
+      padding: 48px 0;
+    }
+
+    .section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .section-header {
+      margin-bottom: 24px;
+    }
+
+    .section-kicker {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent-soft);
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 560px;
+    }
+
+    /* SOBRE O LIVRO */
+
+    .section-book {
+      background: rgba(5, 5, 6, 0.9);
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .book-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 28px;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 880px) {
+      .book-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .book-text p {
+      font-size: 14px;
+      margin-bottom: 12px;
+      color: var(--text-muted);
+    }
+
+    .book-bullets {
+      list-style: none;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .book-bullets li {
+      margin-bottom: 8px;
+      display: flex;
+      gap: 8px;
+      color: var(--text-muted);
+    }
+
+    .book-bullets li::before {
+      content: "•";
+      color: var(--accent-soft);
+      margin-top: 1px;
+    }
+
+    .book-cta-row {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .book-side-card {
+      background: rgba(10, 10, 12, 0.92);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-soft);
+      padding: 16px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .book-side-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    /* CONSULTORIA */
+
+    .section-consult {
+      background: rgba(5, 5, 6, 0.94);
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .consult-card {
+      background: rgba(10, 10, 12, 0.96);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-soft);
+      padding: 20px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      gap: 24px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    @media (max-width: 880px) {
+      .consult-card {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .consult-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .consult-tagline {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .consult-list {
+      list-style: none;
+      font-size: 14px;
+      margin-top: 6px;
+      color: var(--text-muted);
+    }
+
+    .consult-list li {
+      margin-bottom: 6px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .consult-list li::before {
+      content: "→";
+      color: var(--accent-soft);
+      margin-top: 0;
+    }
+
+    .consult-price {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .consult-note {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .consult-col-right {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: space-between;
+    }
+
+    .badge-soft {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* MÉTODO */
+
+    .section-metodo {
+      background: rgba(10, 10, 12, 0.96);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    @media (max-width: 880px) {
+      .steps-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 520px) {
+      .steps-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .step-card {
+      background: rgba(5, 5, 6, 0.96);
+      border-radius: 14px;
+      border: 1px solid var(--border-soft);
+      padding: 12px 12px 14px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .step-letter {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent-soft);
+      margin-bottom: 3px;
+    }
+
+    .step-name {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--text-main);
+    }
+
+    /* AUTOR */
+
+    .section-autor {
+      background: rgba(5, 5, 6, 0.96);
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .autor-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    @media (max-width: 880px) {
+      .autor-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .autor-photo {
+      width: 100%;
+      max-width: 260px;
+      border-radius: 999px;
+      aspect-ratio: 4 / 5;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.14), transparent 55%),
+        linear-gradient(145deg, #222, #000);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .autor-text p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    /* NEWSLETTER */
+
+    .section-news {
+      background: rgba(5, 5, 6, 0.96);
+    }
+
+    .news-card {
+      background: rgba(10, 10, 12, 0.96);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-soft);
+      padding: 20px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .news-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .news-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 24px 0 32px;
+      background: rgba(5, 5, 6, 0.98);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px;
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-top-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-link {
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.02);
+      cursor: pointer;
+      transition: border-color var(--transition-fast), background-color var(--transition-fast),
+        color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .footer-link:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      transform: translateY(-1px);
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-brand {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .scroll-top {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      cursor: pointer;
+      color: var(--accent-soft);
+    }
   </style>
+
+  <script>
+    // scroll suave para âncoras
+    document.addEventListener("DOMContentLoaded", function () {
+      const internalLinks = document.querySelectorAll('a[href^="#"]');
+      internalLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          const targetId = this.getAttribute("href");
+          if (targetId.length > 1) {
+            e.preventDefault();
+            const target = document.querySelector(targetId);
+            if (target) {
+              window.scrollTo({
+                top: target.offsetTop - 70,
+                behavior: "smooth",
+              });
+            }
+          }
+        });
+      });
+    });
+  </script>
 </head>
 <body>
-  <header class="container" aria-label="Topo do site">
-    <div class="brand">
-      <!-- Ícone microfone + rosa em SVG minimalista -->
-      <svg class="logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M40 8a8 8 0 0 1 8 8v10a8 8 0 0 1-16 0V16a8 8 0 0 1 8-8Z" stroke="#fff" stroke-width="3"/>
-        <path d="M24 26c0 10 6 16 16 16" stroke="#fff" stroke-width="3"/>
-        <path d="M40 42v8" stroke="#fff" stroke-width="3"/>
-        <path d="M40 50H28" stroke="#fff" stroke-width="3"/>
-        <path d="M18 50c6-8 14-10 22-4" stroke="#e50914" stroke-width="3"/>
-        <circle cx="18" cy="50" r="3" fill="#e50914"/>
-      </svg>
-      <strong>Edésio Oliveira</strong>
-      <span class="note">Método Recomece</span>
-    </div>
-  </header>
-<!-- ===== Sobre o Método RECOMECE (bloco técnico) ===== -->
-<section class="container section" aria-label="Sobre o método">
-  <div class="card" id="sobre-metodo" style="padding:24px 22px;">
-    <h2 style="margin:0 0 12px 0; font-size:26px; line-height:1.2;">Sobre o Método <span style="color:#e50914; font-weight:800;">RECOMECE</span></h2>
-    <p style="color:#cfcfcf; margin:0 0 12px 0;">
-      O Método RECOMECE nasceu na interseção entre logística, comportamento humano e gestão de mudanças.
-      A mesma lógica que otimiza uma cadeia de suprimentos é aplicada à vida e à carreira: identificar gargalos,
-      priorizar recursos e construir movimento sustentável.
-    </p>
-
-    <div style="display:grid; gap:8px; margin-top:8px; color:#e5e5e5;">
-      <div><strong style="color:#e50914;">R</strong> — <strong>Reconhecer o ponto de partida</strong>: diagnóstico honesto do cenário atual.</div>
-      <div><strong>E</strong> — <strong>Estabelecer prioridades</strong>: decidir o que importa agora.</div>
-      <div><strong>C</strong> — <strong>Construir resiliência</strong>: fortalecer mentalidade e rotina.</div>
-      <div><strong>O</strong> — <strong>Organizar recursos</strong>: alinhar tempo, energia e rede de apoio.</div>
-      <div><strong>M</strong> — <strong>Mudar a mentalidade</strong>: reprogramar crenças e narrativas limitantes.</div>
-      <div><strong>E</strong> — <strong>Executar com consistência</strong>: transformar plano em ritmo.</div>
-      <div><strong>C</strong> — <strong>Cultivar relacionamentos</strong>: manter conexões genuínas.</div>
-      <div><strong>E</strong> — <strong>Evoluir continuamente</strong>: revisar, ajustar e crescer.</div>
-    </div>
-
-    <p style="color:#cfcfcf; margin:14px 0 0 0;">
-      A sessão de 1h foca exclusivamente no primeiro passo — <strong style="color:#e50914;">Reconhecer o ponto de partida</strong>.
-      Sem clareza do “onde estou”, qualquer estratégia vira tentativa.
-    </p>
-  </div>
-</section>
-<!-- ===== /Sobre o Método RECOMECE ===== -->
-
-  <main class="hero">
-    <div class="container grid">
-      <section class="card" aria-label="Chamada principal">
-        <span class="pill">Sessão individual de 1h • Passo 1</span>
-        <h1 class="title">Reconhecer o ponto de partida</h1>
-        <img src="edesio.jpg" alt="Edésio Oliveira"
-     style="width:140px;height:140px;object-fit:cover;
-border-radius:100%;margin:32px 0 8px 0;border:2px solid #e50914;
-display:block;margin-left:auto;margin-right:auto;">
-
-<h3 style="text-align:center;margin-top:8px;font-weight:600;">Edésio Oliveira</h3>
-
-<p style="text-align:center;margin:4px 0 0 0;font-size:14px;color:#ccc;">Especialista em Logística & Mentor Recomece</p>
-
-<p style="text-align:center;margin-top:12px;font-size:16px;">R$297</p>
-
-<div class="note" style="margin-top:12px">
-          <ul style="margin:0;padding-left:18px;color:var(--muted)">
-            <li>Leitura rápida do cenário e definição do problema central</li>
-            <li>Mapa de prioridades e trade-offs</li>
-            <li>Mini-roteiro com 3 a 5 ações práticas</li>
-            <li>Follow-up curto por e-mail em 48h (opcional)</li>
-          </ul>
+  <div class="page" id="topo">
+    <!-- NAV -->
+    <header class="nav">
+      <div class="nav-inner">
+        <div class="nav-brand">
+          <div class="nav-logo-mark">R</div>
+          <div class="nav-title">
+            <span>Método Recomece</span>
+            <span>Entre Cargas e Cicatrizes</span>
+          </div>
         </div>
-        <div class="cta">
-          <a class="btn primary" href="https://edesiojr.hotmart.host/consultoria-individual-metodo-recomece-f1f30fb4-ad1b-45b7-885f-3ac999e18564" target="_blank" rel="noopener">Contratar Consultoria Recomece</a>
+        <nav class="nav-links">
+          <span class="nav-link"><a href="#livro">Livro</a></span>
+          <span class="nav-link"><a href="#consultoria">Consultoria</a></span>
+          <span class="nav-link"><a href="#metodo">Método</a></span>
+          <span class="nav-link"><a href="#autor">Autor</a></span>
+          <span class="nav-link nav-link-cta"><a href="#newsletter">Newsletter</a></span>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main>
+      <section class="hero" id="livro">
+        <div class="container hero-inner">
+          <div class="hero-logo-wrapper">
+            <img src="logorecomece.jpeg" alt="Logo Recomece – Entre Cargas e Cicatrizes" />
+          </div>
+
+          <div class="hero-kicker">Lançamento em breve</div>
+
+          <h1 class="hero-title">Recomece – Entre Cargas e Cicatrizes</h1>
+
+          <p class="hero-subtitle">
+            Um livro e um método nascidos de recomeços reais: de quem vive o caos do supply, 
+            atravessa rupturas pessoais e ainda assim precisa seguir em frente com responsabilidade.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#amostras" class="btn btn-primary">Ver mais sobre o livro</a>
+            <a href="#newsletter" class="btn btn-ghost">Entrar na lista de pré-lançamento</a>
+          </div>
+
+          <p class="hero-note">
+            <strong>Pré-venda em breve</strong> em plataformas digitais e versão impressa.  
+            Os links finais serão atualizados aqui assim que o arquivo estiver aprovado.
+          </p>
         </div>
       </section>
 
-      <aside class="method" id="metodo" aria-label="Resumo do método">
-        <h2 style="margin:0 0 8px 0">Método <span style="color:var(--brand);font-weight:800">RECOMECE</span></h2>
-        <p class="note">Sessão de 1h foca exclusivamente no <strong>Passo 1</strong>.</p>
-        <div class="steps">
-          <div class="step step--focus"><div class="badge">R</div><div><strong>Reconhecer</strong> o ponto de partida</div></div>
-          <div class="step"><div class="badge">E</div><div>Estabelecer prioridades</div></div>
-          <div class="step"><div class="badge">C</div><div>Construir resiliência</div></div>
-          <div class="step"><div class="badge">O</div><div>Organizar recursos</div></div>
-          <div class="step"><div class="badge">M</div><div>Mudar a mentalidade</div></div>
-          <div class="step"><div class="badge">E</div><div>Executar com consistência</div></div>
-          <div class="step"><div class="badge">C</div><div>Cultivar relacionamentos</div></div>
-          <div class="step"><div class="badge">E</div><div>Evoluir continuamente</div></div>
+      <!-- SOBRE O LIVRO -->
+      <section class="section-book" id="amostras">
+        <div class="section-inner">
+          <div class="section-header">
+            <div class="section-kicker">Sobre o livro</div>
+            <h2 class="section-title">Entre cargas, cicatrizes e recomeços possíveis</h2>
+            <p class="section-subtitle">
+              Nada de promessa mágica. É vida real, com quedas, revisões de rota e recomeços construídos na marra,
+              organizada em um método que dá nome ao livro.
+            </p>
+          </div>
+
+          <div class="book-layout">
+            <div class="book-text">
+              <p>
+                Este livro nasceu da interseção entre logística, comportamento humano e gestão de mudanças.
+                A mesma lógica que otimiza uma cadeia de suprimentos é aplicada à vida e à carreira:
+                identificar gargalos, priorizar recursos e construir movimento sustentável.
+              </p>
+              <p>
+                Em vez de fingir que está tudo bem, a proposta é outra: reconhecer com honestidade onde você está,
+                o que já não cabe mais e o que ainda pode ser reconstruído.
+              </p>
+
+              <ul class="book-bullets">
+                <li>Histórias reais de ruptura, medo, cansaço e reconstrução.</li>
+                <li>O passo a passo do Método Recomece, sem glamour, com responsabilidade.</li>
+                <li>Reflexões para carreira, relacionamentos, decisões difíceis e futuro.</li>
+                <li>Convites práticos para sair da inércia sem romantizar o caos.</li>
+              </ul>
+
+              <div class="book-cta-row">
+                <a href="#newsletter" class="btn btn-primary">Receber o aviso do lançamento</a>
+                <!-- Substituir pelo link da newsletter real -->
+                <a href="https://seu-link-da-newsletter.com" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">
+                  Ler a newsletter Recomece
+                </a>
+              </div>
+            </div>
+
+            <aside class="book-side-card">
+              <div class="book-side-title">Prévia do conteúdo</div>
+              <p>
+                “Recomeçar não é apagar o que aconteceu.  
+                É admitir as marcas, reorganizar as cargas e decidir, com honestidade,
+                o que ainda merece espaço no próximo capítulo.”
+              </p>
+              <p style="margin-top: 10px;">
+                Em breve, o primeiro capítulo estará disponível aqui, de forma gratuita, para leitura online.
+              </p>
+            </aside>
+          </div>
         </div>
-      </aside>
-    </div>
-  </main>
+      </section>
 
-  <!-- =====================  FAQ / Método Recomece  ===================== -->
-<section id="faq" class="card" style="margin-top:32px;padding:28px 22px;border-radius:24px;background:#0f0f10;">
-  <h2 style="margin:0 0 16px 0;font-size:28px;line-height:1.2;">Perguntas frequentes</h2>
+      <!-- CONSULTORIA -->
+      <section class="section-consult" id="consultoria">
+        <div class="section-inner">
+          <div class="section-header">
+            <div class="section-kicker">Consultoria individual</div>
+            <h2 class="section-title">Sessão R – Reconhecer o ponto de partida</h2>
+            <p class="section-subtitle">
+              A primeira etapa do Método Recomece aplicada à sua realidade, em uma sessão online de 60 minutos.
+            </p>
+          </div>
 
-  <div class="faq-list">
+          <div class="consult-card">
+            <div>
+              <h3 class="consult-title">Uma hora para tirar o ruído e enxergar o essencial</h3>
+              <p class="consult-tagline">
+                Você traz o contexto. Eu trago método, perguntas incômodas, organização e direção prática.
+              </p>
+              <ul class="consult-list">
+                <li>Leitura do cenário atual, sem floreio.</li>
+                <li>Definição do problema central (ou dos poucos que realmente importam).</li>
+                <li>Mapa de prioridades e trade-offs.</li>
+                <li>Mini-roteiro com 3 a 5 ações práticas para os próximos dias.</li>
+                <li>Follow-up por e-mail em até 48 horas, com resumo e próximos passos.</li>
+              </ul>
+            </div>
 
-    <details class="faq-item">
-      <summary>O que acontece nessa 1h de sessão?</summary>
-      <div class="faq-content">
-        Você me conta seu cenário atual. Eu te ajudo a enxergar com clareza o que realmente está travando e qual é o próximo passo possível.
-        Nada de fórmula mágica: é diagnóstico e direção prática.
+            <div class="consult-col-right">
+              <div>
+                <div class="badge-soft">Sessão individual · Online · 60 minutos</div>
+                <p class="consult-price">R$ 297,00</p>
+                <p class="consult-note">
+                  Pagamento seguro, parcelamento disponível e garantia de 7 dias.
+                </p>
+                <!-- Substituir pelo link real da Hotmart/checkout -->
+                <a href="https://seu-link-da-consultoria-hotmart.com"
+                   class="btn btn-primary"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Agendar minha sessão
+                </a>
+              </div>
+              <div style="font-size: 12px; color: var(--text-muted);">
+                <strong>Garantia honesta:</strong> se a sessão não fizer sentido para você, 
+                o valor é devolvido. Sem burocracia, sem mágoa, sem promessa vazia.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MÉTODO -->
+      <section class="section-metodo" id="metodo">
+        <div class="section-inner">
+          <div class="section-header">
+            <div class="section-kicker">O método</div>
+            <h2 class="section-title">Recomece em 7 passos</h2>
+            <p class="section-subtitle">
+              Um framework nascido da prática: entre CDs, planilhas, decisões difíceis e recomeços pessoais.
+            </p>
+          </div>
+
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-letter">R</div>
+              <div class="step-name">Reconhecer o ponto de partida</div>
+              <p>Ver com clareza onde você está, o que quebrou e o que ainda está de pé.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-letter">E</div>
+              <div class="step-name">Estruturar prioridades</div>
+              <p>Separar o que é urgente do que é importante e definir o que vem primeiro.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-letter">C</div>
+              <div class="step-name">Corrigir rotas</div>
+              <p>Ajustar escolhas, hábitos e caminhos que já não cabem no novo ciclo.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-letter">O</div>
+              <div class="step-name">Organizar recursos</div>
+              <p>Tempo, energia, dinheiro, rede de apoio: o que você tem e como usar melhor.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-letter">M</div>
+              <div class="step-name">Mensurar o progresso</div>
+              <p>Definir indicadores simples para não viver só de sensação.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-letter">E</div>
+              <div class="step-name">Estabilizar o novo ciclo</div>
+              <p>Transformar o recomeço em rotina sustentável, não só em pico de energia.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-letter">C</div>
+              <div class="step-name">Consolidar & Evoluir</div>
+              <p>Levar os aprendizados para o próximo capítulo, sem se definir pela queda.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-name">Na prática</div>
+              <p style="margin-top: 4px;">
+                O livro mostra a história e a lógica do método.  
+                A consultoria aplica tudo isso diretamente na sua realidade.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AUTOR -->
+      <section class="section-autor" id="autor">
+        <div class="section-inner">
+          <div class="section-header">
+            <div class="section-kicker">Sobre o autor</div>
+            <h2 class="section-title">Entre CDs, caminhões e recomeços</h2>
+            <p class="section-subtitle">
+              Profissional de supply que carrega caminhões e histórias há mais de duas décadas.
+            </p>
+          </div>
+
+          <div class="autor-grid">
+            <div class="autor-photo">
+              <!-- Substituir pela sua foto recortada em PNG/JPG -->
+              <!-- <img src="sua-foto.png" alt="Foto de Edésio Oliveira" /> -->
+            </div>
+            <div class="autor-text">
+              <p>
+                Edésio Oliveira atua há mais de 20 anos em Supply Chain, Operações e Gestão de Transportes,
+                liderando projetos de reestruturação, expansão e resolução de problemas bem longe da teoria.
+              </p>
+              <p>
+                No meio disso tudo, vieram também mudanças de cidade, de carreira, de relacionamento e de
+                identidade. Em vez de esconder as rachaduras, decidiu transformá-las em método e conversa séria
+                sobre recomeço.
+              </p>
+              <p>
+                O Método Recomece nasceu desse cruzamento: entre a vida que acontece no CD, na rua, em casa e
+                dentro da cabeça de quem carrega muito peso – por dentro e por fora.
+              </p>
+              <div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px;">
+                <!-- Substituir pelo link real do LinkedIn -->
+                <a href="https://www.linkedin.com/in/seu-perfil"
+                   class="btn btn-ghost"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Me acompanhar no LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER -->
+      <section class="section-news" id="newsletter">
+        <div class="section-inner">
+          <div class="news-card">
+            <div class="section-header" style="margin-bottom: 14px;">
+              <div class="section-kicker">Newsletter</div>
+              <h2 class="section-title">Recomece – Entre Cargas e Cicatrizes</h2>
+              <p class="section-subtitle">
+                Textos quinzenais sobre carreira, vida, logística, decisões difíceis e recomeços possíveis,
+                com responsabilidade emocional.
+              </p>
+            </div>
+            <p class="news-subtitle">
+              Nada de receita pronta. É bastidor, reflexão sincera, contexto de operações reais e o que
+              acontece entre um ciclo e outro de recomeço.
+            </p>
+            <!-- Substituir pelo link real da newsletter -->
+            <a href="https://seu-link-da-newsletter.com"
+               class="btn btn-primary"
+               target="_blank"
+               rel="noopener noreferrer">
+              Assinar a newsletter Recomece
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-top-links">
+          <div class="footer-links">
+            <a href="#livro" class="footer-link">Livro</a>
+            <a href="#consultoria" class="footer-link">Consultoria</a>
+            <a href="#metodo" class="footer-link">Método</a>
+            <a href="#newsletter" class="footer-link">Newsletter</a>
+          </div>
+          <div class="scroll-top">
+            <a href="#topo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
+              Voltar ao topo
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-brand">
+            © <span id="year"></span> Método Recomece · Edésio Oliveira.  
+            Entre cargas, cicatrizes e recomeços possíveis.
+          </div>
+        </div>
       </div>
-    </details>
-
-    <details class="faq-item">
-      <summary>Serve para qualquer pessoa?</summary>
-      <div class="faq-content">
-        Serve para quem está em transição profissional ou pessoal e precisa entender “onde está” antes de decidir “para onde vai”.
-        Se você quer clareza antes de movimento, é para você.
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary>Essa 1h já resolve o problema?</summary>
-      <div class="faq-content">
-        Ela resolve o <em>caos inicial</em>. Você sai com um mapa de prioridades e 3–5 ações práticas. Muitas vezes só enxergar com nitidez já muda tudo.
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary>Preciso continuar depois dessa sessão?</summary>
-      <div class="faq-content">
-        Não é obrigatório. A sessão é completa em si. Se fizer sentido seguir, a gente combina os próximos passos.
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary>Por que custa R$ 297?</summary>
-      <div class="faq-content">
-        Porque é consultoria individual baseada no Método Recomece, com leitura de cenário e follow-up curto. O valor é pelo impacto, não só pelo tempo.
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary>Posso reagendar se algo acontecer?</summary>
-      <div class="faq-content">
-        Pode sim, com até 24h de antecedência. A vida acontece — o recomeço também.
-      </div>
-    </details>
-
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </footer>
   </div>
-</section>
-
-<style>
-  /* FAQ – estilo acordeão no seu tema */
-  .faq-item {
-    border: 1px solid #1f1f22;
-    border-radius: 14px;
-    background: #111214;
-    margin: 10px 0;
-    overflow: hidden;
-  }
-  .faq-item summary {
-    list-style: none;
-    cursor: pointer;
-    padding: 16px 18px;
-    font-weight: 600;
-    color: #fff;
-    position: relative;
-    outline: none;
-  }
-  /* ícone + / – */
-  .faq-item summary::after {
-    content: "+";
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-weight: 700;
-    color: #e50914;
-  }
-  .faq-item[open] summary::after {
-    content: "–";
-  }
-
-  .faq-content {
-    padding: 0 18px 16px 18px;
-    color: #cfcfcf;
-    line-height: 1.55;
-    /* animação de abrir/fechar */
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .28s ease;
-  }
-  .faq-item[open] .faq-content {
-    max-height: 400px; /* suficiente para o texto; ajuste se quiser */
-  }
-
-  /* foco acessível */
-  .faq-item summary:focus-visible {
-    outline: 2px solid #e50914;
-    outline-offset: 4px;
-    border-radius: 12px;
-  }
-</style>
-
-<script>
-  // (Opcional) deixa só um FAQ aberto por vez
-  document.querySelectorAll('.faq-item summary').forEach(s => {
-    s.addEventListener('click', function(e){
-      const current = this.parentElement;
-      if(!current.open){ // vai abrir
-        document.querySelectorAll('.faq-item[open]').forEach(d => {
-          if(d !== current) d.removeAttribute('open');
-        });
-      }
-    });
-  });
-</script>
-<!-- =====================  /FAQ  ===================== -->
-
-        <div class="cta">
-          <a class="btn primary" href="https://edesiojr.hotmart.host/consultoria-individual-metodo-recomece-f1f30fb4-ad1b-45b7-885f-3ac999e18564" target="_blank" rel="noopener">Contratar Consultoria Recomece</a>
-        </div>
-
-    <section class="container section" aria-label="Links úteis">
-    <div style="text-align:center;margin-top:32px;">
-      <h3 style="font-weight:700;margin-bottom:16px;">Mais sobre meu trabalho</h3>
-        <div class="cta" style="margin-top:8px">
-          <a class="btn" href="https://metodorecomece.beehiiv.com" target="_blank" rel="noopener">Ler a newsletter</a>
-          <a class="btn" href="https://www.instagram.com/metodo_recomece" target="_blank" rel="noopener">Instagram</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/edesiojr/" target="_blank" rel="noopener">LinkedIn – Edésio Oliveira</a>
-          <a class="btn" href="book.html" target="_blank">Livro (Hotmart + KDP)</a>
-          <a class="btn" href="https://www.linkedin.com/services/page/4a9a6733ba8a727140" target="_blank" rel="noopener">Página de serviços – LinkedIn</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="container">
-    <div class="foot">
-      <span>© <span id="y"></span> Edésio Oliveira</span>
-      <span class="note">Contato: <a href="mailto:contato@metodorecomece.com.br">contato@metodorecomece.com.br</a></span>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear()
-  </script>
 </body>
 </html>
