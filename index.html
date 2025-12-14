@@ -31,11 +31,7 @@
       --max-width: 1120px;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: var(--font-main);
@@ -56,24 +52,14 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      opacity: 0.25; /* se ficar forte demais, baixa pra 0.18–0.20 */
+      opacity: 0.25;
       z-index: -1;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .page {
-      min-height: 100vh;
-      backdrop-filter: blur(2px);
-    }
+    .page { min-height: 100vh; backdrop-filter: blur(2px); }
 
     .container {
       width: 100%;
@@ -83,7 +69,6 @@
     }
 
     /* NAV */
-
     .nav {
       position: sticky;
       top: 0;
@@ -106,13 +91,10 @@
       padding: 14px 16px;
       max-width: var(--max-width);
       margin: 0 auto;
+      gap: 12px;
     }
 
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    .nav-brand { display: flex; align-items: center; gap: 10px; }
 
     .nav-logo-mark {
       width: 32px;
@@ -141,15 +123,15 @@
       font-size: 11px;
     }
 
-    .nav-title span:last-child {
-      font-weight: 600;
-    }
+    .nav-title span:last-child { font-weight: 600; }
 
     .nav-links {
       display: flex;
       align-items: center;
       gap: 16px;
       font-size: 13px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .nav-link {
@@ -184,31 +166,21 @@
     }
 
     @media (max-width: 720px) {
-      .nav-inner {
-        gap: 10px;
-      }
-      .nav-links {
-        gap: 8px;
-      }
+      .nav-inner { padding: 12px 14px; }
       .nav-links span:nth-child(2),
-      .nav-links span:nth-child(3) {
-        display: none;
-      }
+      .nav-links span:nth-child(3),
+      .nav-links span:nth-child(4) { display: none; }
     }
 
     /* HERO */
-
-    .hero {
-      padding: 80px 0 56px;
-      position: relative;
-    }
+    .hero { padding: 80px 0 56px; position: relative; }
 
     .hero::before {
-      /* overlay escuro pra garantir legibilidade em cima da textura */
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at 10% 0%, rgba(224, 40, 40, 0.18), transparent 55%),
+      background:
+        radial-gradient(circle at 10% 0%, rgba(224, 40, 40, 0.18), transparent 55%),
         radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.12), transparent 60%),
         linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.92));
       z-index: -1;
@@ -281,10 +253,7 @@
       font-weight: 600;
     }
 
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      background: linear-gradient(120deg, var(--accent-soft), var(--accent));
-    }
+    .btn-primary:hover { transform: translateY(-1px); background: linear-gradient(120deg, var(--accent-soft), var(--accent)); }
 
     .btn-ghost {
       background: rgba(10, 10, 12, 0.7);
@@ -305,26 +274,12 @@
       margin: 0 auto;
     }
 
-    .hero-note strong {
-      color: var(--accent-soft);
-      font-weight: 600;
-    }
+    .hero-note strong { color: var(--accent-soft); font-weight: 600; }
 
     /* SECTION WRAPPER */
-
-    section {
-      padding: 48px 0;
-    }
-
-    .section-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 16px;
-    }
-
-    .section-header {
-      margin-bottom: 24px;
-    }
+    section { padding: 48px 0; }
+    .section-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 16px; }
+    .section-header { margin-bottom: 24px; }
 
     .section-kicker {
       font-size: 11px;
@@ -334,20 +289,10 @@
       margin-bottom: 6px;
     }
 
-    .section-title {
-      font-size: 22px;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .section-subtitle {
-      font-size: 14px;
-      color: var(--text-muted);
-      max-width: 560px;
-    }
+    .section-title { font-size: 22px; font-weight: 600; margin-bottom: 6px; }
+    .section-subtitle { font-size: 14px; color: var(--text-muted); max-width: 560px; }
 
     /* SOBRE O LIVRO */
-
     .section-book {
       background: rgba(5, 5, 6, 0.9);
       border-top: 1px solid rgba(255, 255, 255, 0.04);
@@ -358,20 +303,14 @@
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
       gap: 28px;
-      align-items: flex-start;
+      align-items: start;
     }
 
     @media (max-width: 880px) {
-      .book-layout {
-        grid-template-columns: minmax(0, 1fr);
-      }
+      .book-layout { grid-template-columns: minmax(0, 1fr); }
     }
 
-    .book-text p {
-      font-size: 14px;
-      margin-bottom: 12px;
-      color: var(--text-muted);
-    }
+    .book-text p { font-size: 14px; margin-bottom: 12px; color: var(--text-muted); }
 
     .book-bullets {
       list-style: none;
@@ -392,62 +331,49 @@
       margin-top: 1px;
     }
 
-    .book-cta-row {
-      margin-top: 18px;
+    .book-cta-row { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; }
+
+    /* Wrapper direita (mockup + prévia) alinhados e com mesma largura */
+    .previa-wrapper{
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
     }
 
+    .livro-mockup-container{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .livro-mockup{
+      width: 100%;
+      max-width: 380px;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.7));
+      transition: transform 0.2s ease;
+    }
+
+    .livro-mockup:hover { transform: scale(1.01); }
+
     .book-side-card {
+      width: 100%;
+      max-width: 380px;
       background: rgba(10, 10, 12, 0.92);
       border-radius: var(--radius-lg);
       border: 1px solid var(--border-soft);
       padding: 18px;
       font-size: 13px;
       color: var(--text-muted);
-    
+      box-shadow: var(--shadow-soft);
     }
 
-    .book-side-title {
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 6px;
-      color: var(--text-main);
-    }
+    .book-side-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; color: var(--text-main); }
 
-.previa-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  margin-top: 0px;
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-.livro-mockup-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0 !important;
-}
-
-.livro-mockup {
-  width: min(380px, 80vw);
-  height: auto;
-  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.7));
-  transition: transform 0.3s ease;
-}
-
-.livro-mockup:hover {
-  transform: scale(1.00);
-}
-
-
-    
     /* CONSULTORIA */
-
     .section-consult {
       background: rgba(5, 5, 6, 0.94);
       border-top: 1px solid rgba(255, 255, 255, 0.04);
@@ -465,23 +391,10 @@
       box-shadow: var(--shadow-soft);
     }
 
-    @media (max-width: 880px) {
-      .consult-card {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
+    @media (max-width: 880px) { .consult-card { grid-template-columns: minmax(0, 1fr); } }
 
-    .consult-title {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .consult-tagline {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-    }
+    .consult-title { font-size: 18px; font-weight: 600; margin-bottom: 4px; }
+    .consult-tagline { font-size: 13px; color: var(--text-muted); margin-bottom: 12px; }
 
     .consult-list {
       list-style: none;
@@ -490,36 +403,13 @@
       color: var(--text-muted);
     }
 
-    .consult-list li {
-      margin-bottom: 6px;
-      display: flex;
-      gap: 8px;
-    }
+    .consult-list li { margin-bottom: 6px; display: flex; gap: 8px; }
+    .consult-list li::before { content: "→"; color: var(--accent-soft); }
 
-    .consult-list li::before {
-      content: "→";
-      color: var(--accent-soft);
-      margin-top: 0;
-    }
+    .consult-col-right { display: flex; flex-direction: column; gap: 10px; justify-content: space-between; }
 
-    .consult-price {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .consult-note {
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-    }
-
-    .consult-col-right {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      justify-content: space-between;
-    }
+    .consult-price { font-size: 20px; font-weight: 600; margin-bottom: 4px; }
+    .consult-note { font-size: 12px; color: var(--text-muted); margin-bottom: 10px; }
 
     .badge-soft {
       display: inline-flex;
@@ -531,84 +421,75 @@
       border: 1px solid rgba(255, 255, 255, 0.08);
       font-size: 11px;
       color: var(--text-muted);
+      margin-bottom: 10px;
     }
 
-       /*-- MÉTODO -*/
-       
-           <!-- MÉTODO -->
-      <section class="section-metodo" id="metodo">
-        <div class="section-inner">
-          <div class="section-header">
-            <div class="section-kicker">O método</div>
-            <h2 class="section-title">Recomece em 8 passos</h2>
-            <p class="section-subtitle">
-              Um framework nascido da prática: entre CDs, planilhas, decisões difíceis e recomeços pessoais.
-            </p>
-          </div>
+    /* MÉTODO (cards) */
+    .section-metodo {
+      background: rgba(5, 5, 6, 0.96);
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
 
-          <div class="steps-grid">
-            <!-- R -->
-            <div class="step-card">
-              <div class="step-letter">R</div>
-              <div class="step-name">Reconhecer o ponto de partida</div>
-              <p>Diagnóstico honesto do cenário atual.</p>
-            </div>
+    .steps-grid{
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
 
-            <!-- E -->
-            <div class="step-card">
-              <div class="step-letter">E</div>
-              <div class="step-name">Estabelecer prioridades</div>
-              <p>Organizar mente, prioridades e micro-prioridades.</p>
-            </div>
+    @media (max-width: 980px){
+      .steps-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
 
-            <!-- E -->
-            <div class="step-card">
-              <div class="step-letter">E</div>
-              <div class="step-name">Executar com consistência</div>
-              <p>Transformar plano em ritmo.</p>
-            </div>
+    @media (max-width: 520px){
+      .steps-grid{ grid-template-columns: 1fr; }
+    }
 
-            <!-- O -->
-            <div class="step-card">
-              <div class="step-letter">O</div>
-              <div class="step-name">Organizar recursos</div>
-              <p>Tempo, dinheiro, conhecimento e rede. O que você já tem.</p>
-            </div>
+    .step-card{
+      background: rgba(10, 10, 12, 0.96);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      box-shadow: var(--shadow-soft);
+      min-height: 140px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: transform var(--transition-fast), border-color var(--transition-fast);
+    }
 
-            <!-- E -->
-            <div class="step-card">
-              <div class="step-letter">E</div>
-              <div class="step-name">Evoluir continuamente</div>
-              <p>Registrar lições e ajustar a rota na próxima volta da espiral.</p>
-            </div>
+    .step-card:hover{
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,0.18);
+    }
 
-            <!-- C -->
-            <div class="step-card">
-              <div class="step-letter">C</div>
-              <div class="step-name">Cultivar relacionamentos</div>
-              <p>Manter conexões genuínas.</p>
-            </div>
+    .step-letter{
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #fff;
+      background: linear-gradient(120deg, var(--accent), var(--accent-soft));
+      box-shadow: 0 10px 24px rgba(224, 40, 40, 0.35);
+    }
 
-            <!-- C -->
-            <div class="step-card">
-              <div class="step-letter">C</div>
-              <div class="step-name">Construir resiliência</div>
-              <p>Usar aprendizados de crises passadas como armadura emocional.</p>
-            </div>
+    .step-name{
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text-main);
+      line-height: 1.3;
+    }
 
-            <!-- M -->
-            <div class="step-card">
-              <div class="step-letter">M</div>
-              <div class="step-name">Mudar mentalidade</div>
-              <p>Do modo culpa-vítima para o modo responsabilidade.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+    .step-card p{
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
 
     /* AUTOR */
-
     .section-autor {
       background: rgba(5, 5, 6, 0.96);
       border-top: 1px solid rgba(255, 255, 255, 0.04);
@@ -622,11 +503,7 @@
       align-items: center;
     }
 
-    @media (max-width: 880px) {
-      .autor-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
+    @media (max-width: 880px) { .autor-grid { grid-template-columns: minmax(0, 1fr); } }
 
     .autor-photo {
       width: 100%;
@@ -641,17 +518,17 @@
       overflow: hidden;
     }
 
-    .autor-text p {
-      font-size: 14px;
-      color: var(--text-muted);
-      margin-bottom: 10px;
+    .autor-photo img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
+
+    .autor-text p { font-size: 14px; color: var(--text-muted); margin-bottom: 10px; }
 
     /* NEWSLETTER */
-
-    .section-news {
-      background: rgba(5, 5, 6, 0.96);
-    }
+    .section-news { background: rgba(5, 5, 6, 0.96); }
 
     .news-card {
       background: rgba(10, 10, 12, 0.96);
@@ -661,20 +538,10 @@
       box-shadow: var(--shadow-soft);
     }
 
-    .news-title {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .news-subtitle {
-      font-size: 14px;
-      color: var(--text-muted);
-      margin-bottom: 14px;
-    }
+    .news-title { font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+    .news-subtitle { font-size: 14px; color: var(--text-muted); margin-bottom: 14px; }
 
     /* FOOTER */
-
     footer {
       padding: 24px 0 32px;
       background: rgba(5, 5, 6, 0.98);
@@ -700,11 +567,7 @@
       justify-content: space-between;
     }
 
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 10px; }
 
     .footer-link {
       padding: 4px 8px;
@@ -723,18 +586,8 @@
       transform: translateY(-1px);
     }
 
-    .footer-bottom {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .footer-brand {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
+    .footer-bottom { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center; }
+    .footer-brand { font-size: 11px; color: var(--text-muted); }
 
     .scroll-top {
       font-size: 11px;
@@ -767,6 +620,7 @@
     });
   </script>
 </head>
+
 <body>
   <div class="page" id="topo">
     <!-- NAV -->
@@ -798,11 +652,10 @@
           </div>
 
           <div class="hero-kicker">Lançamento em breve</div>
-
           <h1 class="hero-title">Recomece – Entre Cargas e Cicatrizes</h1>
 
           <p class="hero-subtitle">
-            Um livro e um método nascidos de recomeços reais: de quem vive o caos do supply, 
+            Um livro e um método nascidos de recomeços reais: de quem vive o caos do supply,
             atravessa rupturas pessoais e ainda assim precisa seguir em frente com responsabilidade.
           </p>
 
@@ -812,7 +665,7 @@
           </div>
 
           <p class="hero-note">
-            <strong>Pré-venda em breve</strong> em plataformas digitais e versão impressa.  
+            <strong>Pré-venda em breve</strong> em plataformas digitais e versão impressa.
             Os links finais serão atualizados aqui assim que o arquivo estiver aprovado.
           </p>
         </div>
@@ -851,37 +704,35 @@
 
               <div class="book-cta-row">
                 <a href="#newsletter" class="btn btn-primary">Receber o aviso do lançamento</a>
-                <!-- Substituir pelo link da newsletter real -->
                 <a href="https://metodorecomece.beehiiv.com" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">
                   Ler a newsletter Recomece
                 </a>
               </div>
             </div>
 
-           <div class="book-preview-wrapper">
+            <!-- DIREITA: mockup + prévia alinhados -->
+            <div class="previa-wrapper">
+              <div class="livro-mockup-container">
+                <img
+                  src="capafinal.jpeg"
+                  alt="Mockup do livro Recomece – Entre Cargas e Cicatrizes"
+                  class="livro-mockup"
+                />
+              </div>
 
-  <div class="livro-mockup-container">
-    <img 
-      src="capafinal.jpeg" 
-      alt="Mockup do livro Recomece – Entre Cargas e Cicatrizes"
-      class="livro-mockup"
-    />
-  </div>
-
-  <aside class="book-side-card">
-    <div class="book-side-title">Prévia do conteúdo</div>
-    <p>
-      “Recomeçar não é apagar o que aconteceu.  
-      É admitir as marcas, reorganizar as cargas e decidir, com honestidade,
-      o que ainda merece espaço no próximo capítulo.”
-    </p>
-    <p style="margin-top: 10px;">
-      Em breve, o primeiro capítulo estará disponível aqui, de forma gratuita, para leitura online.
-    </p>
-  </aside>
-
-</div>
-
+              <aside class="book-side-card">
+                <div class="book-side-title">Prévia do conteúdo</div>
+                <p>
+                  “Recomeçar não é apagar o que aconteceu.
+                  É admitir as marcas, reorganizar as cargas e decidir, com honestidade,
+                  o que ainda merece espaço no próximo capítulo.”
+                </p>
+                <p style="margin-top: 10px;">
+                  Em breve, o primeiro capítulo estará disponível aqui, de forma gratuita, para leitura online.
+                </p>
+              </aside>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -918,7 +769,6 @@
                 <p class="consult-note">
                   Pagamento seguro, parcelamento disponível e garantia de 7 dias.
                 </p>
-                <!-- Substituir pelo link real da Hotmart/checkout -->
                 <a href="https://pay.kiwify.com.br/llZUb2x"
                    class="btn btn-primary"
                    target="_blank"
@@ -926,7 +776,7 @@
                   Agendar minha sessão
                 </a>
               </div>
-              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -943,63 +793,54 @@
           </div>
 
           <div class="steps-grid">
-            <!-- R -->
             <div class="step-card">
               <div class="step-letter">R</div>
               <div class="step-name">Reconhecer o ponto de partida</div>
               <p>Diagnóstico honesto do cenário atual.</p>
             </div>
 
-            <!-- E -->
             <div class="step-card">
               <div class="step-letter">E</div>
               <div class="step-name">Estabelecer prioridades</div>
               <p>Organizar mente, prioridades e micro-prioridades.</p>
             </div>
 
-             <!-- C -->
             <div class="step-card">
               <div class="step-letter">C</div>
               <div class="step-name">Construir resiliência</div>
               <p>Usar aprendizados de crises passadas como armadura emocional.</p>
             </div>
 
-            <!-- O -->
             <div class="step-card">
               <div class="step-letter">O</div>
               <div class="step-name">Organizar recursos</div>
               <p>Tempo, dinheiro, conhecimento e rede. O que você já tem.</p>
             </div>
 
-            <!-- M -->
             <div class="step-card">
               <div class="step-letter">M</div>
               <div class="step-name">Mudar mentalidade</div>
               <p>Do modo culpa-vítima para o modo responsabilidade.</p>
             </div>
 
-            
-            <!-- E -->
             <div class="step-card">
               <div class="step-letter">E</div>
               <div class="step-name">Executar com consistência</div>
               <p>Transformar plano em ritmo.</p>
             </div>
 
-            <!-- C -->
             <div class="step-card">
               <div class="step-letter">C</div>
               <div class="step-name">Cultivar relacionamentos</div>
               <p>Manter conexões genuínas.</p>
             </div>
 
-            <!-- E -->
             <div class="step-card">
               <div class="step-letter">E</div>
               <div class="step-name">Evoluir continuamente</div>
               <p>Registrar lições e ajustar a rota na próxima volta da espiral.</p>
             </div>
-           </div>
+          </div>
         </div>
       </section>
 
@@ -1016,8 +857,7 @@
 
           <div class="autor-grid">
             <div class="autor-photo">
-              <!-- Substituir pela sua foto recortada em PNG/JPG -->
-              <img src="edesio.jpeg" alt="Foto de Edésio Oliveira" /> -->
+              <img src="edesio.jpeg" alt="Foto de Edésio Oliveira" />
             </div>
             <div class="autor-text">
               <p>
@@ -1034,7 +874,6 @@
                 dentro da cabeça de quem carrega muito peso – por dentro e por fora.
               </p>
               <div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px;">
-                <!-- Substituir pelo link real do LinkedIn -->
                 <a href="https://www.linkedin.com/in/edesiojr"
                    class="btn btn-ghost"
                    target="_blank"
@@ -1059,11 +898,12 @@
                 com responsabilidade emocional.
               </p>
             </div>
+
             <p class="news-subtitle">
               Nada de receita pronta. É bastidor, reflexão sincera, contexto de operações reais e o que
               acontece entre um ciclo e outro de recomeço.
             </p>
-            <!-- Substituir pelo link real da newsletter -->
+
             <a href="https://metodorecomece.beehiiv.com/"
                class="btn btn-primary"
                target="_blank"
@@ -1091,13 +931,15 @@
             </a>
           </div>
         </div>
+
         <div class="footer-bottom">
           <div class="footer-brand">
-            © <span id="year"></span> Método Recomece · Edésio Oliveira.  
+            © <span id="year"></span> Método Recomece · Edésio Oliveira.
             Entre cargas, cicatrizes e recomeços possíveis.
           </div>
         </div>
       </div>
+
       <script>
         document.getElementById("year").textContent = new Date().getFullYear();
       </script>
