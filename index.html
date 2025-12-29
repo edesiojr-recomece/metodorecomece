@@ -2,16 +2,33 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Recomece – Entre Cargas e Cicatrizes | Edésio Oliveira</title>
+  <title>Recomece – Entre Cargas e Cicatrizes | Livro e Método RECOMECE (8 passos) – Edésio Oliveira</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Livro Recomece – Entre Cargas e Cicatrizes e consultoria individual baseada no Método Recomece, criado por Edésio Oliveira." />
+  <meta name="description" content="Recomece – Entre Cargas e Cicatrizes: livro sobre recomeço profissional e pessoal com o Método RECOMECE (8 passos). Compre o físico, o digital ou o Kindle. Consultoria Sessão R (60 min) para aplicar o método na sua realidade." />
   <meta name="author" content="Edésio Oliveira" />
 
-  <!-- Open Graph básico -->
-  <meta property="og:title" content="Recomece – Entre Cargas e Cicatrizes" />
-  <meta property="og:description" content="Um livro e um método para recomeçar com clareza, mesmo em meio ao caos." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Recomece – Entre Cargas e Cicatrizes | Livro + Método RECOMECE" />
+  <meta property="og:description" content="Um livro direto e humano sobre recomeço com método: 8 passos aplicáveis para vida e carreira. Físico, digital e Kindle disponíveis." />
   <meta property="og:image" content="capasite.png" />
   <meta property="og:type" content="website" />
+
+  <!-- SEO: JSON-LD (Book) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Recomece – Entre Cargas e Cicatrizes",
+    "author": {
+      "@type": "Person",
+      "name": "Edésio Oliveira"
+    },
+    "inLanguage": "pt-BR",
+    "bookFormat": ["https://schema.org/EBook", "https://schema.org/Paperback"],
+    "description": "Livro sobre recomeço profissional e pessoal com o Método RECOMECE (8 passos), usando logística como metáfora para reorganizar vida e carreira.",
+    "datePublished": "2026-01-15"
+  }
+  </script>
 
   <style>
     :root {
@@ -43,7 +60,6 @@
       min-height: 100vh;
     }
 
-    /* Fundo com textura da contracapa */
     body::before {
       content: "";
       position: fixed;
@@ -187,7 +203,7 @@
     }
 
     .hero-inner {
-      max-width: 720px;
+      max-width: 780px;
       margin: 0 auto;
       text-align: center;
       display: flex;
@@ -195,18 +211,17 @@
       align-items: center;
       gap: 18px;
     }
-    
+
     .hero-logo-wrapper{
       width: min(720px, 92vw);
       margin-bottom: 6px;
     }
-    
+
     .hero-logo-wrapper img{
       width: 100%;
       height: auto;
       object-fit: contain;
     }
-
 
     .hero-kicker {
       text-transform: uppercase;
@@ -223,7 +238,7 @@
     .hero-subtitle {
       font-size: 16px;
       color: var(--text-muted);
-      max-width: 560px;
+      max-width: 640px;
       margin: 0 auto;
     }
 
@@ -259,7 +274,10 @@
       font-weight: 600;
     }
 
-    .btn-primary:hover { transform: translateY(-1px); background: linear-gradient(120deg, var(--accent-soft), var(--accent)); }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      background: linear-gradient(120deg, var(--accent-soft), var(--accent));
+    }
 
     .btn-ghost {
       background: rgba(10, 10, 12, 0.7);
@@ -276,7 +294,7 @@
     .hero-note {
       font-size: 13px;
       color: var(--text-muted);
-      max-width: 420px;
+      max-width: 560px;
       margin: 0 auto;
     }
 
@@ -296,7 +314,7 @@
     }
 
     .section-title { font-size: 22px; font-weight: 600; margin-bottom: 6px; }
-    .section-subtitle { font-size: 14px; color: var(--text-muted); max-width: 560px; }
+    .section-subtitle { font-size: 14px; color: var(--text-muted); max-width: 720px; }
 
     /* SOBRE O LIVRO */
     .section-book {
@@ -339,7 +357,6 @@
 
     .book-cta-row { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; }
 
-    /* Wrapper direita (mockup + prévia) alinhados e com mesma largura */
     .previa-wrapper{
       display: flex;
       flex-direction: column;
@@ -605,7 +622,6 @@
   </style>
 
   <script>
-    // scroll suave para âncoras
     document.addEventListener("DOMContentLoaded", function () {
       const internalLinks = document.querySelectorAll('a[href^="#"]');
       internalLinks.forEach((link) => {
@@ -654,33 +670,48 @@
       <section class="hero" id="livro">
         <div class="container hero-inner">
           <div class="hero-logo-wrapper">
-            <img src="capasite.png" alt="Logo Recomece – Entre Cargas e Cicatrizes" />
+            <img src="capasite.png" alt="Capa do livro Recomece – Entre Cargas e Cicatrizes" />
           </div>
 
-          <div class="hero-kicker">Lançamento em 15-01-2026!</div>
+          <div class="hero-kicker">LANÇADO EM 15/01/2026</div>
           <h1 class="hero-title">Recomece – Entre Cargas e Cicatrizes</h1>
 
           <p class="hero-subtitle">
-            Um livro e um método nascidos de recomeços reais: de quem vive o caos do supply,
-            atravessa rupturas pessoais e ainda assim precisa seguir em frente com responsabilidade.
+            Um livro direto e humano sobre recomeço profissional e pessoal, usando a logística como metáfora
+            e o <strong>Método RECOMECE</strong> como roteiro: 8 passos aplicáveis para reorganizar a vida, a carreira e as decisões.
           </p>
 
           <div class="hero-actions">
-            <a href="#amostras" class="btn btn-primary">Ver mais sobre o livro</a>
-            <a 
-            href="https://amzn.to/3YrSBx3"
-            class="btn btn-primary"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Pré-compra na Amazon
-          </a>
+            <a href="#amostras" class="btn btn-ghost">Entender o livro</a>
 
+            <!-- Botão principal (Físico) -->
+            <a href="https://pay.hotmart.com/N103539685N"
+               class="btn btn-primary"
+               target="_blank"
+               rel="noopener noreferrer">
+              Comprar físico (Hotmart)
+            </a>
+
+            <!-- Digitais em ghost -->
+            <a href="https://pay.hotmart.com/D103310096V"
+               class="btn btn-ghost"
+               target="_blank"
+               rel="noopener noreferrer">
+              Comprar digital (Hotmart)
+            </a>
+
+            <a href="https://amzn.to/3YrSBx3"
+               class="btn btn-ghost"
+               target="_blank"
+               rel="noopener noreferrer">
+              Ler no Kindle (Amazon)
+            </a>
           </div>
 
           <p class="hero-note">
-            <strong>Pré-venda na Amazon já disponível!</strong> 
-            Os links finais para compra digital serão atualizados aqui assim que o arquivo estiver aprovado.
+            <strong>Escolha seu formato e comece hoje.</strong>
+            Se você leu o livro e quer aplicar o método na sua realidade com clareza brutal, a próxima parada é a
+            <a href="#consultoria" style="text-decoration: underline; color: var(--accent-soft);">Sessão R</a>.
           </p>
         </div>
       </section>
@@ -692,39 +723,64 @@
             <div class="section-kicker">Sobre o livro</div>
             <h2 class="section-title">Entre cargas, cicatrizes e recomeços possíveis</h2>
             <p class="section-subtitle">
-              Nada de promessa mágica. É vida real, com quedas, revisões de rota e recomeços construídos na marra,
-              organizada em um método que dá nome ao livro.
+              Sem promessa mágica. Sem “coachês”. É vida real: quedas, revisões de rota e recomeços construídos com método.
+              Aqui, a lógica que organiza operações vira lógica para organizar vida e carreira.
             </p>
           </div>
 
           <div class="book-layout">
             <div class="book-text">
               <p>
-                Este livro nasceu da interseção entre logística, comportamento humano e gestão de mudanças.
-                A mesma lógica que otimiza uma cadeia de suprimentos é aplicada à vida e à carreira:
-                identificar gargalos, priorizar recursos e construir movimento sustentável.
+                O livro nasce do cruzamento entre o caos do supply e as dores que ninguém ensina no MBA:
+                rupturas, mudanças, pressão, luto, medo e aquele cansaço que não cabe em planilha.
               </p>
               <p>
-                Em vez de fingir que está tudo bem, a proposta é outra: reconhecer com honestidade onde você está,
-                o que já não cabe mais e o que ainda pode ser reconstruído.
+                A proposta é simples e difícil: <strong>reconhecer com honestidade onde você está</strong>,
+                tirar o ruído, priorizar o que importa e reconstruir o próximo capítulo com responsabilidade.
               </p>
 
               <ul class="book-bullets">
-                <li>Histórias reais de ruptura, medo, cansaço e reconstrução.</li>
-                <li>O passo a passo do Método Recomece, sem glamour, com responsabilidade.</li>
-                <li>Reflexões para carreira, relacionamentos, decisões difíceis e futuro.</li>
-                <li>Convites práticos para sair da inércia sem romantizar o caos.</li>
+                <li>Histórias reais de ruptura, pressão e reconstrução.</li>
+                <li>O Método RECOMECE: 8 passos aplicáveis (sem glamour, com verdade).</li>
+                <li>Reflexões práticas para carreira, decisões difíceis, relacionamentos e futuro.</li>
+                <li>Um roteiro para sair da inércia sem romantizar o caos.</li>
               </ul>
 
               <div class="book-cta-row">
-                <a href="#newsletter" class="btn btn-primary">Receber o aviso do lançamento</a>
-                <a href="https://metodorecomece.beehiiv.com" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">
+                <!-- Físico em vermelho -->
+                <a href="https://pay.hotmart.com/N103539685N"
+                   class="btn btn-primary"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Comprar físico (Hotmart)
+                </a>
+
+                <!-- Digitais em ghost -->
+                <a href="https://pay.hotmart.com/D103310096V"
+                   class="btn btn-ghost"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Comprar digital (Hotmart)
+                </a>
+
+                <a href="https://amzn.to/3YrSBx3"
+                   class="btn btn-ghost"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Kindle (Amazon)
+                </a>
+
+                <a href="#consultoria" class="btn btn-ghost">Próximo passo: Sessão R</a>
+
+                <a href="https://metodorecomece.beehiiv.com"
+                   class="btn btn-ghost"
+                   target="_blank"
+                   rel="noopener noreferrer">
                   Ler a newsletter Recomece
                 </a>
               </div>
             </div>
 
-            <!-- DIREITA: mockup + prévia alinhados -->
             <div class="previa-wrapper">
               <div class="livro-mockup-container">
                 <img
@@ -735,15 +791,19 @@
               </div>
 
               <aside class="book-side-card">
-                <div class="book-side-title">Prévia do conteúdo</div>
+                <div class="book-side-title">Uma frase que resume a proposta</div>
                 <p>
                   “Recomeçar não é apagar o que aconteceu.
                   É admitir as marcas, reorganizar as cargas e decidir, com honestidade,
                   o que ainda merece espaço no próximo capítulo.”
                 </p>
                 <p style="margin-top: 10px;">
-                  Em breve, o primeiro capítulo estará disponível aqui, de forma gratuita, para leitura online.
+                  Terminou o livro e sentiu que precisa de direção prática?
+                  A <strong>Sessão R</strong> é o jeito mais rápido de aplicar o método na sua realidade, com clareza e próximos passos.
                 </p>
+                <a href="#consultoria" class="btn btn-primary" style="margin-top: 12px; width: 100%;">
+                  Quero aplicar o Método (Sessão R)
+                </a>
               </aside>
             </div>
           </div>
@@ -754,30 +814,32 @@
       <section class="section-consult" id="consultoria">
         <div class="section-inner">
           <div class="section-header">
-            <div class="section-kicker">Consultoria individual</div>
-            <h2 class="section-title">Sessão R – Reconhecer o ponto de partida</h2>
+            <div class="section-kicker">Próximo passo após o livro</div>
+            <h2 class="section-title">Sessão R (60 min) – Aplicando o Método RECOMECE na sua realidade</h2>
             <p class="section-subtitle">
-              A primeira etapa do Método Recomece aplicada à sua realidade, em uma sessão online de 60 minutos.
+              Você já entendeu o método no livro. Agora vem a parte que muda jogo: <strong>traduzir o RECOMECE para a sua vida</strong>,
+              sem autoengano e sem enrolação. Uma sessão individual para sair do “eu sei o que fazer” e ir para “eu vou fazer”.
             </p>
           </div>
 
           <div class="consult-card">
             <div>
-              <h3 class="consult-title">Uma hora para tirar o ruído e enxergar o essencial</h3>
+              <h3 class="consult-title">Clareza brutal, prioridades reais e um plano enxuto para os próximos 7 dias</h3>
               <p class="consult-tagline">
-                Você traz o contexto. Eu trago método, perguntas incômodas, organização e direção prática.
+                Você traz a situação. Eu trago método, perguntas incômodas e organização para transformar ruído em direção prática.
               </p>
               <ul class="consult-list">
-                <li>Leitura do cenário atual, sem floreio.</li>
-                <li>Definição do problema central (ou dos poucos que realmente importam).</li>
-                <li>Mapa de prioridades e trade-offs.</li>
-                <li>Mini-roteiro com 3 a 5 ações práticas para os próximos dias.</li>
-                <li>Follow-up por e-mail em até 48 horas, com resumo e próximos passos.</li>
+                <li>Identificar seu <strong>ponto de partida real</strong> (não o que a cabeça inventa).</li>
+                <li>Definir o problema central e separar o que é sintoma do que é causa.</li>
+                <li>Mapa de prioridades e trade-offs: o que entra, o que sai, o que espera.</li>
+                <li>Plano simples com 3 a 5 ações práticas para executar nos próximos dias.</li>
+                <li>Follow-up por e-mail em até 48 horas com resumo e próximos passos.</li>
               </ul>
             </div>
 
             <div class="consult-col-right">
               <div>
+                <div class="badge-soft">Ideal para quem leu o livro e quer aplicar rápido</div>
                 <div class="badge-soft">Sessão individual · Online · 60 minutos</div>
                 <p class="consult-price">R$ 297,00</p>
                 <p class="consult-note">
@@ -787,7 +849,7 @@
                    class="btn btn-primary"
                    target="_blank"
                    rel="noopener noreferrer">
-                  Agendar minha sessão
+                  Aplicar o Método na minha vida
                 </a>
               </div>
             </div>
@@ -800,9 +862,10 @@
         <div class="section-inner">
           <div class="section-header">
             <div class="section-kicker">O método</div>
-            <h2 class="section-title">Recomece em 8 passos</h2>
+            <h2 class="section-title">RECOMECE em 8 passos</h2>
             <p class="section-subtitle">
               Um framework nascido da prática: entre CDs, planilhas, decisões difíceis e recomeços pessoais.
+              Simples de entender. Difícil de executar sozinho. Por isso existe o livro e a Sessão R.
             </p>
           </div>
 
@@ -822,37 +885,37 @@
             <div class="step-card">
               <div class="step-letter">C</div>
               <div class="step-name">Construir resiliência</div>
-              <p>Usar aprendizados de crises passadas como armadura emocional.</p>
+              <p>Transformar crise em estrutura emocional.</p>
             </div>
 
             <div class="step-card">
               <div class="step-letter">O</div>
               <div class="step-name">Organizar recursos</div>
-              <p>Tempo, dinheiro, conhecimento e rede. O que você já tem.</p>
+              <p>Tempo, dinheiro, energia, conhecimento e rede.</p>
             </div>
 
             <div class="step-card">
               <div class="step-letter">M</div>
               <div class="step-name">Mudar mentalidade</div>
-              <p>Do modo culpa-vítima para o modo responsabilidade.</p>
+              <p>Do modo culpa-vítima para responsabilidade.</p>
             </div>
 
             <div class="step-card">
               <div class="step-letter">E</div>
               <div class="step-name">Executar com consistência</div>
-              <p>Transformar plano em ritmo.</p>
+              <p>Plano vira ritmo. Ritmo vira resultado.</p>
             </div>
 
             <div class="step-card">
               <div class="step-letter">C</div>
               <div class="step-name">Cultivar relacionamentos</div>
-              <p>Manter conexões genuínas.</p>
+              <p>Conexões genuínas como parte do caminho.</p>
             </div>
 
             <div class="step-card">
               <div class="step-letter">E</div>
               <div class="step-name">Evoluir continuamente</div>
-              <p>Registrar lições e ajustar a rota na próxima volta da espiral.</p>
+              <p>Registrar lições e ajustar rota sempre.</p>
             </div>
           </div>
         </div>
@@ -879,13 +942,12 @@
                 liderando projetos de reestruturação, expansão e resolução de problemas bem longe da teoria.
               </p>
               <p>
-                No meio disso tudo, vieram também mudanças de cidade, de carreira, de relacionamento e de
-                identidade. Em vez de esconder as rachaduras, decidiu transformá-las em método e conversa séria
-                sobre recomeço.
+                No meio disso tudo, vieram mudanças de cidade, de carreira, de relacionamento e de identidade.
+                Em vez de esconder as rachaduras, decidiu transformá-las em método e conversa séria sobre recomeço.
               </p>
               <p>
-                O Método Recomece nasceu desse cruzamento: entre a vida que acontece no CD, na rua, em casa e
-                dentro da cabeça de quem carrega muito peso – por dentro e por fora.
+                O Método RECOMECE nasceu desse cruzamento: entre a vida que acontece no CD, na rua, em casa e
+                dentro da cabeça de quem carrega muito peso, por dentro e por fora.
               </p>
               <div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px;">
                 <a href="https://www.linkedin.com/in/edesiojr"
@@ -914,8 +976,8 @@
             </div>
 
             <p class="news-subtitle">
-              Nada de receita pronta. É bastidor, reflexão sincera, contexto de operações reais e o que
-              acontece entre um ciclo e outro de recomeço.
+              Bastidor real. Reflexão direta. Contexto de operações e vida acontecendo ao mesmo tempo.
+              Se você curte o livro, aqui é onde a conversa continua.
             </p>
 
             <a href="https://metodorecomece.beehiiv.com/"
